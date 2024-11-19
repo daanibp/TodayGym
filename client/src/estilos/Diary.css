@@ -1,0 +1,21 @@
+/* Para las imágenes en la view initial */
+@media (max-height: 750px) {
+    .responsive-initial-height {
+        width: 10rem; /* w-40 */
+    }
+}
+@media (max-height: 660px) {
+    .responsive-initial-height {
+        width: 8rem;
+    }
+}
+@media (max-height: 590px) {
+    .responsive-initial-height {
+        width: 6rem;
+    }
+}
+@media (max-height: 530px) {
+    .responsive-initial-height {
+        width: 3rem;
+    }
+}

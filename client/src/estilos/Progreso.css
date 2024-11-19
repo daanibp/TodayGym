@@ -1,0 +1,21 @@
+.responsive-slide-sets-height {
+    height: calc((100vh - 200px - 96px + 20px) / 2 + var(--sets, 0) * 20px);
+}
+
+@media (max-height: 750px) {
+    .responsive-slide-sets-height {
+        height: 20rem;
+    }
+}
+
+.responsive-slide-intervals-height {
+    height: calc(
+        (100vh - 200px - 96px + 20px) / 2 + var(--intervals, 0) * 20px
+    );
+}
+
+@media (max-height: 750px) {
+    .responsive-slide-intervals-height {
+        height: 20rem;
+    }
+}

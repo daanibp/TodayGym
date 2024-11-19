@@ -1,0 +1,32 @@
+/* Ocultar botones de navegación de mes */
+.react-calendar__navigation button {
+    display: none;
+}
+
+/* Estilo para los días resaltados */
+.highlight-red {
+    position: relative;
+    color: white; /* Para que el texto sea visible sobre el fondo */
+}
+
+.highlight-red::before {
+    content: "🔥"; /* Emoji de fuego */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;  /* Ajusta el tamaño del emoji */
+    z-index: -1; /* Pone el emoji detrás del texto */
+    opacity: 0.6; /* Puede ajustar la opacidad para hacerlo menos intrusivo */
+}
+
+/* Elimina el subrayado de los días de la semana */
+.react-calendar__month-view__weekdays abbr {
+    text-decoration: none !important;
+}
+
+.react-calendar__month-view__weekdays {
+    margin-bottom: 3px;
+}
+  
+  

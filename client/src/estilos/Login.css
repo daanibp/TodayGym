@@ -1,0 +1,10 @@
+@media (max-width: 1024px) and (max-height: 600px) {
+    .responsive-heading {
+        font-size: 3rem; /* Ajusta a un tamaño más pequeño */
+    }
+
+    .responsive-container {
+        flex-direction: row; /* Cambia de columna a fila */
+        padding-left: 3rem;
+    }
+}
