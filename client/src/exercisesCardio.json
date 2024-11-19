@@ -2,31 +2,31 @@
     {
         "id": 1,
         "name": "Cinta",
-        "image": "PressBanca.jpg"
+        "image": "Cinta.png"
     },
     {
         "id": 2,
         "name": "Bicicleta estática",
-        "image": "PressBanca.jpg"
+        "image": "BicicletaEstática.png"
     },
     {
         "id": 3,
         "name": "Bicicleta de spinning",
-        "image": "PressBanca.jpg"
+        "image": "BicicletaDeSpinning.png"
     },
     {
         "id": 4,
         "name": "Elíptica",
-        "image": "PressBanca.jpg"
+        "image": "Elíptica.png"
     },
     {
         "id": 5,
         "name": "Escaladora",
-        "image": "PressBanca.jpg"
+        "image": "Escaladora.png"
     },
     {
         "id": 6,
         "name": "Air Bike",
-        "image": "PressBanca.jpg"
+        "image": "AirBike.png"
     }
 ]

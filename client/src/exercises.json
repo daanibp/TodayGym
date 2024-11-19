@@ -2,648 +2,643 @@
     {
         "id": 1,
         "name": "Press Banca",
-        "image": "PressBanca.jpg",
+        "image": "PressBanca.png",
         "category": "Pectoral"
     },
     {
         "id": 2,
         "name": "Press Inclinado Barra",
-        "image": "PressBanca.jpg",
+        "image": "PressInclinadoBarra.png",
         "category": "Pectoral"
     },
     {
         "id": 3,
         "name": "Press Declinado Barra",
-        "image": "PressBanca.jpg",
+        "image": "PressDeclinadoBarra.png",
         "category": "Pectoral"
     },
     {
         "id": 4,
         "name": "Press Plano con Mancuernas",
-        "image": "PressBanca.jpg",
+        "image": "PressPlanoConMancuernas.png",
         "category": "Pectoral"
     },
     {
         "id": 5,
         "name": "Press Inclinado con Mancuernas",
-        "image": "PressBanca.jpg",
+        "image": "PressInclinadoConMancuernas.png",
         "category": "Pectoral"
     },
     {
         "id": 6,
         "name": "Press Declinado con Mancuernas",
-        "image": "PressBanca.jpg",
+        "image": "PressDeclinadoConMancuernas.png",
         "category": "Pectoral"
     },
     {
         "id": 7,
         "name": "Aperturas con Mancuernas",
-        "image": "PressBanca.jpg",
+        "image": "AperturasConMancuernas.png",
         "category": "Pectoral"
     },
     {
         "id": 8,
         "name": "Peck Deck",
-        "image": "PressBanca.jpg",
+        "image": "PeckDeck.png",
         "category": "Pectoral"
     },
     {
         "id": 9,
         "name": "Aperturas Polea Arriba",
-        "image": "PressBanca.jpg",
+        "image": "AperturasPoleaArriba.png",
         "category": "Pectoral"
     },
     {
         "id": 10,
         "name": "Aperturas Polea Medio",
-        "image": "PressBanca.jpg",
+        "image": "AperturasPoleaMedio.png",
         "category": "Pectoral"
     },
     {
         "id": 11,
         "name": "Aperturas Polea Abajo",
-        "image": "PressBanca.jpg",
+        "image": "AperturasPoleaAbajo.png",
         "category": "Pectoral"
     },
     {
         "id": 12,
         "name": "Aperturas Polea Banco Inclinado",
-        "image": "PressBanca.jpg",
+        "image": "AperturasPoleaBancoInclinado.png",
         "category": "Pectoral"
     },
     {
         "id": 13,
-        "name": "Peck Deck",
-        "image": "PressBanca.jpg",
+        "name": "Aperturas Inclinado Máquina",
+        "image": "AperturasInclinadoMáquina.png",
         "category": "Pectoral"
     },
     {
         "id": 14,
         "name": "Press Plano Máquina",
-        "image": "PressBanca.jpg",
+        "image": "PressPlanoMáquina.png",
         "category": "Pectoral"
     },
     {
         "id": 15,
         "name": "Press Plano Máquina Discos",
-        "image": "PressBanca.jpg",
+        "image": "PressPlanoMáquinaDiscos.png",
         "category": "Pectoral"
     },
     {
         "id": 16,
         "name": "Press Inclinado Máquina",
-        "image": "PressBanca.jpg",
+        "image": "PressInclinadoMáquina.png",
         "category": "Pectoral"
     },
     {
         "id": 17,
         "name": "Press Plano Smith",
-        "image": "PressBanca.jpg",
+        "image": "PressPlanoSmith.png",
         "category": "Pectoral"
     },
     {
         "id": 18,
         "name": "Press Inclinado Smith",
-        "image": "PressBanca.jpg",
+        "image": "PressInclinadoSmith.png",
         "category": "Pectoral"
     },
     {
         "id": 19,
         "name": "Flexiones",
-        "image": "PressBanca.jpg",
+        "image": "Flexiones.png",
         "category": "Pectoral"
     },
     {
         "id": 30,
         "name": "Jalón Ancho",
-        "image": "PressBanca.jpg",
+        "image": "JalónAncho.png",
         "category": "Espalda"
     },
     {
         "id": 31,
         "name": "Jalón Neutro",
-        "image": "PressBanca.jpg",
+        "image": "JalónNeutro.png",
         "category": "Espalda"
     },
     {
         "id": 32,
         "name": "Jalón Cerrado",
-        "image": "PressBanca.jpg",
+        "image": "JalónCerrado.png",
         "category": "Espalda"
     },
     {
         "id": 33,
         "name": "Remo con Barra",
-        "image": "PressBanca.jpg",
+        "image": "RemoconBarra.png",
         "category": "Espalda"
     },
     {
         "id": 34,
         "name": "Remo en T",
-        "image": "PressBanca.jpg",
+        "image": "RemoenT.png",
         "category": "Espalda"
     },
     {
         "id": 35,
         "name": "Remo en Smith",
-        "image": "PressBanca.jpg",
+        "image": "RemoenSmith.png",
         "category": "Espalda"
     },
     {
         "id": 36,
         "name": "Remo Gironda Abierto",
-        "image": "PressBanca.jpg",
+        "image": "RemoGirondaAbierto.png",
         "category": "Espalda"
     },
     {
         "id": 37,
         "name": "Remo Gironda Neutro",
-        "image": "PressBanca.jpg",
+        "image": "RemoGirondaNeutro.png",
         "category": "Espalda"
     },
     {
         "id": 38,
         "name": "Remo Gironda Cerrado",
-        "image": "PressBanca.jpg",
+        "image": "RemoGirondaCerrado.png",
         "category": "Espalda"
     },
     {
         "id": 39,
         "name": "Pullover Polea",
-        "image": "PressBanca.jpg",
+        "image": "PulloverPolea.png",
         "category": "Espalda"
     },
     {
         "id": 40,
         "name": "Pullover Mancuerna",
-        "image": "PressBanca.jpg",
+        "image": "PulloverMancuerna.png",
         "category": "Espalda"
     },
     {
         "id": 41,
         "name": "Pullover Máquina",
-        "image": "PressBanca.jpg",
+        "image": "PulloverMáquina.png",
         "category": "Espalda"
     },
     {
         "id": 42,
         "name": "Peso Muerto Barra",
-        "image": "PressBanca.jpg",
+        "image": "PesoMuertoBarra.png",
         "category": "Espalda"
     },
     {
         "id": 43,
         "name": "Peso Muerto Mancuernas",
-        "image": "PressBanca.jpg",
+        "image": "PesoMuertoMancuernas.png",
         "category": "Espalda"
     },
     {
         "id": 44,
         "name": "Remo con Mancuernas",
-        "image": "PressBanca.jpg",
+        "image": "RemoconMancuernas.png",
         "category": "Espalda"
     },
     {
         "id": 45,
         "name": "Hiperextensiones",
-        "image": "PressBanca.jpg",
+        "image": "Hiperextensiones.png",
         "category": "Espalda"
     },
     {
         "id": 60,
         "name": "Sentadilla",
-        "image": "PressBanca.jpg",
+        "image": "Sentadilla.png",
         "category": "Pierna"
     },
     {
         "id": 61,
         "name": "Sentadilla Hack",
-        "image": "PressBanca.jpg",
+        "image": "SentadillaHack.png",
         "category": "Pierna"
     },
     {
         "id": 62,
         "name": "Sentadilla Pendular",
-        "image": "PressBanca.jpg",
+        "image": "SentadillaPendular.png",
         "category": "Pierna"
     },
     {
         "id": 63,
         "name": "Sentadilla Búlgara Mancuernas",
-        "image": "PressBanca.jpg",
+        "image": "SentadillaBúlgaraMancuernas.png",
         "category": "Pierna"
     },
     {
         "id": 64,
         "name": "Sentadilla Búlgara Smith",
-        "image": "PressBanca.jpg",
+        "image": "SentadillaBúlgaraSmith.png",
         "category": "Pierna"
     },
     {
         "id": 65,
         "name": "Extensiones de Cuádriceps",
-        "image": "PressBanca.jpg",
+        "image": "ExtensionesdeCuádriceps.png",
         "category": "Pierna"
     },
     {
         "id": 66,
         "name": "Prensa Horizontal",
-        "image": "PressBanca.jpg",
+        "image": "PrensaHorizontal.png",
         "category": "Pierna"
     },
     {
         "id": 67,
         "name": "Prensa Inclinada",
-        "image": "PressBanca.jpg",
+        "image": "PrensaInclinada.png",
         "category": "Pierna"
     },
     {
         "id": 68,
         "name": "Prensa Vertical",
-        "image": "PressBanca.jpg",
+        "image": "PrensaVertical.png",
         "category": "Pierna"
-    },{
+    },
+    {
         "id": 69,
         "name": "Peso Muerto Rumano",
-        "image": "PressBanca.jpg",
+        "image": "PesoMuertoRumano.png",
         "category": "Pierna"
-    },{
+    },
+    {
         "id": 70,
         "name": "Hip Thrust",
-        "image": "PressBanca.jpg",
+        "image": "HipThrust.png",
         "category": "Pierna"
-    },{
+    },
+    {
         "id": 71,
         "name": "Máquina Femoral Acostado",
-        "image": "PressBanca.jpg",
+        "image": "MáquinaFemoralAcostado.png",
         "category": "Pierna"
-    },{
+    },
+    {
         "id": 72,
         "name": "Extensiones Femoral",
-        "image": "PressBanca.jpg",
+        "image": "ExtensionesFemoral.png",
         "category": "Pierna"
     },
     {
         "id": 73,
         "name": "Zancadas",
-        "image": "PressBanca.jpg",
+        "image": "Zancadas.png",
         "category": "Pierna"
-    },{
+    },
+    {
         "id": 74,
         "name": "Prensa Horizontal Femoral",
-        "image": "PressBanca.jpg",
+        "image": "PrensaHorizontalFemoral.png",
         "category": "Pierna"
     },
     {
         "id": 75,
         "name": "Prensa Inclinada Femoral",
-        "image": "PressBanca.jpg",
+        "image": "PrensaInclinadaFemoral.png",
         "category": "Pierna"
     },
     {
         "id": 76,
         "name": "Prensa Vertical Femoral",
-        "image": "PressBanca.jpg",
+        "image": "PrensaVerticalFemoral.png",
         "category": "Pierna"
-    },{
+    },
+    {
         "id": 77,
         "name": "Prensa Horizontal Gemelos",
-        "image": "PressBanca.jpg",
+        "image": "PrensaHorizontalGemelos.png",
         "category": "Pierna"
     },
     {
         "id": 78,
         "name": "Prensa Inclinada Gemelos",
-        "image": "PressBanca.jpg",
+        "image": "PrensaInclinadaGemelos.png",
         "category": "Pierna"
     },
     {
         "id": 79,
         "name": "Prensa Vertical Gemelos",
-        "image": "PressBanca.jpg",
+        "image": "PrensaVerticalGemelos.png",
         "category": "Pierna"
     },
     {
         "id": 80,
         "name": "Máquina Gemelos",
-        "image": "PressBanca.jpg",
+        "image": "MáquinaGemelos.png",
         "category": "Pierna"
     },
     {
         "id": 81,
         "name": "Máquina Aductores",
-        "image": "PressBanca.jpg",
+        "image": "MáquinaAductores.png",
         "category": "Pierna"
     },
     {
         "id": 82,
         "name": "Máquina Abductores",
-        "image": "PressBanca.jpg",
+        "image": "MáquinaAbductores.png",
         "category": "Pierna"
     },
     {
         "id": 90,
-        "name": "Prensa Militar Mancuernas",
-        "image": "PressBanca.jpg",
+        "name": "Press Militar Mancuernas",
+        "image": "PressMilitarMancuernas.png",
         "category": "Hombro"
     },
     {
         "id": 91,
-        "name": "Prensa Militar Barra",
-        "image": "PressBanca.jpg",
+        "name": "Press Militar Barra",
+        "image": "PressMilitarBarra.png",
         "category": "Hombro"
     },
     {
         "id": 92,
         "name": "Elevaciones Frontales",
-        "image": "PressBanca.jpg",
+        "image": "ElevacionesFrontales.png",
         "category": "Hombro"
     },
     {
         "id": 93,
         "name": "Elevaciones Frontales Polea",
-        "image": "PressBanca.jpg",
+        "image": "ElevacionesFrontalesPolea.png",
         "category": "Hombro"
     },
     {
         "id": 94,
         "name": "Press Militar Máquina",
-        "image": "PressBanca.jpg",
+        "image": "PressMilitarMáquina.png",
         "category": "Hombro"
     },
     {
         "id": 95,
         "name": "Press Militar Máquina Discos",
-        "image": "PressBanca.jpg",
+        "image": "PressMilitarMáquinaDiscos.png",
         "category": "Hombro"
     },
     {
         "id": 96,
         "name": "Elevaciones Laterales",
-        "image": "PressBanca.jpg",
+        "image": "ElevacionesLaterales.png",
         "category": "Hombro"
     },
     {
         "id": 97,
         "name": "Elevaciones Laterales Sentado",
-        "image": "PressBanca.jpg",
+        "image": "ElevacionesLateralesSentado.png",
         "category": "Hombro"
     },
     {
         "id": 98,
         "name": "Elevaciones Laterales Polea",
-        "image": "PressBanca.jpg",
+        "image": "ElevacionesLateralesPolea.png",
         "category": "Hombro"
     },
     {
         "id": 99,
         "name": "Elevaciones Laterales Máquina 1",
-        "image": "PressBanca.jpg",
+        "image": "ElevacionesLateralesMáquina1.png",
         "category": "Hombro"
     },
     {
         "id": 100,
         "name": "Elevaciones Laterales Máquina 2",
-        "image": "PressBanca.jpg",
+        "image": "ElevacionesLateralesMáquina2.png",
         "category": "Hombro"
     },
     {
         "id": 101,
         "name": "Rear Delt Fly",
-        "image": "PressBanca.jpg",
+        "image": "RearDeltFly.png",
         "category": "Hombro"
     },
     {
         "id": 102,
         "name": "Pájaros Mancuernas",
-        "image": "PressBanca.jpg",
+        "image": "PájarosMancuernas.png",
         "category": "Hombro"
     },
     {
         "id": 103,
-        "name": "Pajaros Polea",
-        "image": "PressBanca.jpg",
+        "name": "Pájaros Polea",
+        "image": "PájarosPolea.png",
         "category": "Hombro"
     },
     {
         "id": 104,
-        "name": "Pajaros Polea Unilateral",
-        "image": "PressBanca.jpg",
+        "name": "Pájaros Polea Unilateral",
+        "image": "PájarosPoleaUnilateral.png",
         "category": "Hombro"
     },
     {
         "id": 105,
         "name": "Face Pull",
-        "image": "PressBanca.jpg",
+        "image": "FacePull.png",
         "category": "Hombro"
     },
     {
         "id": 120,
         "name": "Extensión Tríceps Cuerda",
-        "image": "PressBanca.jpg",
+        "image": "ExtensiónTrícepsCuerda.png",
         "category": "Tríceps"
     },
     {
         "id": 121,
         "name": "Extensión Tríceps Barra",
-        "image": "PressBanca.jpg",
+        "image": "ExtensiónTrícepsBarra.png",
         "category": "Tríceps"
     },
     {
         "id": 122,
         "name": "Extensión Tríceps Unilateral",
-        "image": "PressBanca.jpg",
+        "image": "ExtensiónTrícepsUnilateral.png",
         "category": "Tríceps"
     },
     {
         "id": 123,
         "name": "Katana",
-        "image": "PressBanca.jpg",
+        "image": "Katana.png",
         "category": "Tríceps"
     },
     {
         "id": 124,
         "name": "Extensión Tríceps Cruzado",
-        "image": "PressBanca.jpg",
+        "image": "ExtensiónTrícepsCruzado.png",
         "category": "Tríceps"
     },
     {
         "id": 125,
         "name": "Patada de Burro",
-        "image": "PressBanca.jpg",
+        "image": "PatadaDeBurro.png",
         "category": "Tríceps"
     },
     {
         "id": 126,
         "name": "Patada de Burro Polea",
-        "image": "PressBanca.jpg",
+        "image": "PatadaDeBurroPolea.png",
         "category": "Tríceps"
     },
     {
         "id": 127,
         "name": "Fondos",
-        "image": "PressBanca.jpg",
+        "image": "Fondos.png",
         "category": "Tríceps"
     },
     {
         "id": 128,
-        "name": "Fondos en Banco",
-        "image": "PressBanca.jpg",
+        "name": "Press Banca Cerrado",
+        "image": "PressBancaCerrado.png",
         "category": "Tríceps"
-    },{
+    },
+    {
         "id": 129,
-        "name": "Extensión Tríceps 90º",
-        "image": "PressBanca.jpg",
+        "name": "Press Mancuernas Cerrado",
+        "image": "PressMancuernasCerrado.png",
         "category": "Tríceps"
     },
     {
         "id": 130,
         "name": "Rompecráneos",
-        "image": "PressBanca.jpg",
+        "image": "Rompecráneos.png",
         "category": "Tríceps"
     },
     {
         "id": 131,
         "name": "Press Francés",
-        "image": "PressBanca.jpg",
+        "image": "PressFrancés.png",
         "category": "Tríceps"
     },
     {
         "id": 132,
         "name": "Press JM",
-        "image": "PressBanca.jpg",
+        "image": "PressJM.png",
         "category": "Tríceps"
     },
     {
         "id": 133,
         "name": "Press JM Smith",
-        "image": "PressBanca.jpg",
+        "image": "PressJMSmith.png",
         "category": "Tríceps"
     },
     {
         "id": 134,
         "name": "Fondos Máquina",
-        "image": "PressBanca.jpg",
+        "image": "FondosMáquina.png",
         "category": "Tríceps"
     },
     {
         "id": 135,
         "name": "Máquina Tríceps",
-        "image": "PressBanca.jpg",
+        "image": "MáquinaTríceps.png",
         "category": "Tríceps"
     },
     {
         "id": 136,
         "name": "Elevación Tras Nuca",
-        "image": "PressBanca.jpg",
+        "image": "ElevaciónTrasNuca.png",
         "category": "Tríceps"
     },
     {
         "id": 150,
         "name": "Curl con Mancuernas",
-        "image": "PressBanca.jpg",
+        "image": "CurlconMancuernas.png",
         "category": "Bíceps"
     },
     {
         "id": 151,
         "name": "Curl con Barra",
-        "image": "PressBanca.jpg",
+        "image": "CurlconBarra.png",
         "category": "Bíceps"
     },
     {
         "id": 152,
         "name": "Curl con Mancuerna Scott",
-        "image": "PressBanca.jpg",
+        "image": "CurlconMancuernaScott.png",
         "category": "Bíceps"
     },
     {
         "id": 153,
-        "name": "Curl con Barra en Scott",
-        "image": "PressBanca.jpg",
+        "name": "Curl con Barra Scott",
+        "image": "CurlconBarraScott.png",
         "category": "Bíceps"
     },
     {
         "id": 154,
         "name": "Curl Polea Cuerda",
-        "image": "PressBanca.jpg",
+        "image": "CurlPoleaCuerda.png",
         "category": "Bíceps"
     },
     {
         "id": 155,
         "name": "Curl Polea Barra",
-        "image": "PressBanca.jpg",
+        "image": "CurlPoleaBarra.png",
         "category": "Bíceps"
     },
     {
         "id": 156,
         "name": "Curl Bayesian",
-        "image": "PressBanca.jpg",
+        "image": "CurlBayesian.png",
         "category": "Bíceps"
     },
     {
         "id": 157,
         "name": "Curl Sentado Inclinado",
-        "image": "PressBanca.jpg",
+        "image": "CurlSentadoInclinado.png",
         "category": "Bíceps"
     },
     {
         "id": 158,
         "name": "Curl Martillo",
-        "image": "PressBanca.jpg",
-        "category": "Bíceps"
-    },
-    {
-        "id": 159,
-        "name": "Curl con Mancuerna Scott",
-        "image": "PressBanca.jpg",
-        "category": "Bíceps"
-    },
-    {
-        "id": 160,
-        "name": "Curl Predicador",
-        "image": "PressBanca.jpg",
+        "image": "CurlMartillo.png",
         "category": "Bíceps"
     },
     {
         "id": 161,
         "name": "Curl Máquina Predicador",
-        "image": "PressBanca.jpg",
+        "image": "CurlMáquinaPredicador.png",
         "category": "Bíceps"
     },
     {
         "id": 162,
         "name": "Curl Máquina",
-        "image": "PressBanca.jpg",
+        "image": "CurlMáquina.png",
         "category": "Bíceps"
     },
     {
         "id": 180,
         "name": "Abs Máquina Crunch",
-        "image": "PressBanca.jpg",
+        "image": "AbsMáquinaCrunch.png",
         "category": "Abdominales"
     },
     {
         "id": 181,
         "name": "Crunch Polea",
-        "image": "PressBanca.jpg",
+        "image": "CrunchPolea.png",
         "category": "Abdominales"
     },
     {
         "id": 182,
         "name": "Abs Básicos",
-        "image": "PressBanca.jpg",
+        "image": "AbsBásicos.png",
         "category": "Abdominales"
     },
     {
         "id": 183,
         "name": "Elevaciones de Piernas",
-        "image": "PressBanca.jpg",
+        "image": "ElevacionesdePiernas.png",
         "category": "Abdominales"
     },
     {
         "id": 184,
         "name": "Twist Ruso",
-        "image": "PressBanca.jpg",
+        "image": "TwistRuso.png",
         "category": "Abdominales"
     }
-  ]
+]
