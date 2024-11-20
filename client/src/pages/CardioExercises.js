@@ -44,7 +44,7 @@ function CardioExercises() {
 
         try {
             const response = await fetch(
-                `http://localhost:8080/sessions/cardio/getSessionByDate/${sessionDate}`
+                `https://regymserver.onrender.com/vsessions/cardio/getSessionByDate/${sessionDate}`
             );
 
             if (!response.ok) {
@@ -52,7 +52,7 @@ function CardioExercises() {
                 const session = createSession("Cardio");
                 try {
                     const response = await fetch(
-                        `http://localhost:8080/sessions/cardio/${sessionDate}`,
+                        `https://regymserver.onrender.com/sessions/cardio/${sessionDate}`,
                         {
                             method: "POST",
                             headers: {
@@ -81,13 +81,16 @@ function CardioExercises() {
         const newExercise = createExercise(idSession, exercise.name, image);
         console.log("newExercise: ", newExercise);
 
-        const response = await fetch("http://localhost:8080/exercises", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(newExercise),
-        });
+        const response = await fetch(
+            "https://regymserver.onrender.com/exercises",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newExercise),
+            }
+        );
         if (!response.ok) {
             console.error("Error by adding the new exercise.");
         }

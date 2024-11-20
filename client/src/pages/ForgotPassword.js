@@ -22,7 +22,7 @@ function ForgotPassword() {
 
         try {
             const response = await fetch(
-                "http://localhost:8080/users/forgot-password",
+                "https://regymserver.onrender.com/users/forgot-password",
                 {
                     method: "POST",
                     headers: {

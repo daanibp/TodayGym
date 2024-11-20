@@ -27,7 +27,7 @@ function ResetPassword() {
 
         try {
             const response = await fetch(
-                "http://localhost:8080/users/reset-password",
+                "https://regymserver.onrender.com/users/reset-password",
                 {
                     method: "POST",
                     headers: {

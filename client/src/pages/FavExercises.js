@@ -17,7 +17,7 @@ function FavExercises() {
     useEffect(() => {
         const getExercises = async () => {
             const response = await fetch(
-                `http://localhost:8080/exercises/getAllExercisesById?userId=${user.id}&type=${type}`
+                `https://regymserver.onrender.com/exercises/getAllExercisesById?userId=${user.id}&type=${type}`
             );
             const data = await response.json();
             setExercises(data.exercises || []); // Evitar que sea undefined
@@ -65,11 +65,14 @@ function FavExercises() {
 
         try {
             // Update on server
-            await fetch(`http://localhost:8080/exercises/${exercise.id}/fav`, {
-                method: "PUT",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ fav: updatedExercise.fav }),
-            });
+            await fetch(
+                `https://regymserver.onrender.com/exercises/${exercise.id}/fav`,
+                {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ fav: updatedExercise.fav }),
+                }
+            );
             // Update local state
             setExercises((prevExercises) =>
                 prevExercises.map((ex) =>

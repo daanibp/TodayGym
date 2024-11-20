@@ -56,7 +56,7 @@ function Progreso() {
         try {
             const getNumberOfSessions = async () => {
                 const response = await fetch(
-                    `http://localhost:8080/sessions/getNumberOfSessions/${user.id}`
+                    `https://regymserver.onrender.com/sessions/getNumberOfSessions/${user.id}`
                 );
                 const data = await response.json();
                 setNumberOfSessions(data.numberOfSessions);
@@ -64,7 +64,7 @@ function Progreso() {
 
             const getDaysWithSession = async () => {
                 const response = await fetch(
-                    `http://localhost:8080/sessions/getDaysWithSession/${user.id}`
+                    `https://regymserver.onrender.com/sessions/getDaysWithSession/${user.id}`
                 );
                 const data = await response.json();
                 setDaysWithSession(data.days);
@@ -83,7 +83,7 @@ function Progreso() {
         try {
             const getExercisesFav = async () => {
                 const response = await fetch(
-                    `http://localhost:8080/exercises/pesas/getExercisesFav/${user.id}`
+                    `https://regymserver.onrender.com/exercises/pesas/getExercisesFav/${user.id}`
                 );
                 const data = await response.json();
                 setExercisesFav(data.exercisesFav);
@@ -100,7 +100,7 @@ function Progreso() {
                         async (exercise) => {
                             try {
                                 const response = await fetch(
-                                    `http://localhost:8080/exercises/getMaxWeightBySession?userId=${user.id}&exercise_name=${exercise.exercise_name}`
+                                    `https://regymserver.onrender.com/exercises/getMaxWeightBySession?userId=${user.id}&exercise_name=${exercise.exercise_name}`
                                 );
                                 const exerciseData = await response.json();
 
@@ -141,7 +141,7 @@ function Progreso() {
         try {
             const getExercisesCardioFav = async () => {
                 const response = await fetch(
-                    `http://localhost:8080/exercises/cardio/getExercisesFav/${user.id}`
+                    `https://regymserver.onrender.com/exercises/cardio/getExercisesFav/${user.id}`
                 );
                 const data = await response.json();
                 setExercisesCardioFav(data.exercisesFav);
@@ -158,7 +158,7 @@ function Progreso() {
                         async (exercise) => {
                             try {
                                 const response = await fetch(
-                                    `http://localhost:8080/exercises/getMaxAvgSpeedBySession?userId=${user.id}&exercise_name=${exercise.exercise_name}`
+                                    `https://regymserver.onrender.com/exercises/getMaxAvgSpeedBySession?userId=${user.id}&exercise_name=${exercise.exercise_name}`
                                 );
                                 const exerciseData = await response.json();
 

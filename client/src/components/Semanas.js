@@ -138,7 +138,7 @@ function Semanas() {
 
                 // Llamada a la API con parámetros dinámicos
                 const response = await fetch(
-                    `http://localhost:8080/sessions/week?start=${start}&end=${endDateString}&userId=${user.id}`
+                    `https://regymserver.onrender.com/sessions/week?start=${start}&end=${endDateString}&userId=${user.id}`
                 );
 
                 const data = await response.json();
@@ -160,7 +160,7 @@ function Semanas() {
 
                 // Llamada a la API con parámetros dinámicos
                 const response = await fetch(
-                    `http://localhost:8080/sessions/week/getNumberOfSetsByCategory?start=${start}&end=${endDateString}&userId=${user.id}`
+                    `https://regymserver.onrender.com/sessions/week/getNumberOfSetsByCategory?start=${start}&end=${endDateString}&userId=${user.id}`
                 );
                 if (response.ok) {
                     const data = await response.json();

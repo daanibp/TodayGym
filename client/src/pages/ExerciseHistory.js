@@ -15,7 +15,7 @@ function ExerciseHistory() {
         const getHistory = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:8080/exercises/getExerciseHistory?userId=${user.id}&exercise_name=${exercise_name}&type=${type}`
+                    `https://regymserver.onrender.com/exercises/getExerciseHistory?userId=${user.id}&exercise_name=${exercise_name}&type=${type}`
                 );
                 if (!response.ok) {
                     setHistory([]);
