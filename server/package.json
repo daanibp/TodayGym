@@ -5,10 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "npx nodemon index.js"
+    "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Daniel Borge Puga",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",

@@ -14,7 +14,7 @@ app.use(express.json());
 // Configuración de CORS
 app.use(
     cors({
-        origin: "http://localhost:3000", // Permite solo el frontend de esta dirección
+        origin: "https://blue-sky-0c4158f10.5.azurestaticapps.net", // Permite solo el frontend de esta dirección
         methods: ["GET", "POST", "DELETE", "PUT"], // Métodos permitidos
         credentials: true, // Permite enviar cookies
     })

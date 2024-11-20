@@ -12,9 +12,9 @@ function Fecha({ currentView, isEditable, setIsEditable }) {
 
     const {
         selectedDate,
-        sessionIdPesas,
+        //sessionIdPesas,
         updateSelectedDate,
-        updateSessionIdPesas,
+        //updateSessionIdPesas,
     } = useContext(SessionContext);
 
     const openSelector = () => {
