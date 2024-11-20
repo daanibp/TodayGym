@@ -9,13 +9,11 @@ const db = {};
 
 // Configuración de Sequelize desde variables de entorno
 const config = {
-    database: process.env.DB_NAME, // Nombre de la base de datos
-    username: process.env.DB_USER, // Usuario de la base de datos
-    password: process.env.DB_PASSWORD, // Contraseña del usuario
-    host: process.env.DB_HOST, // Dirección del servidor de la base de datos
-    port: process.env.DB_PORT || 3306,
-    dialect: process.env.DB_DIALECT || "mysql",
-    logging: process.env.DB_LOGGING === "true" ? console.log : false, // Habilita o deshabilita logs
+    database: process.env.MYSQL_DATABASE, // Nombre de la base de datos
+    username: process.env.MYSQL_USER, // Usuario de la base de datos
+    password: process.env.MYSQL_PASSWORD, // Contraseña del usuario
+    host: process.env.MYSQL_HOST, // Dirección del servidor de la base de datos
+    dialect: "mysql",
 };
 
 let sequelize;

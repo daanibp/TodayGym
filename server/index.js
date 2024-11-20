@@ -20,7 +20,7 @@ app.use(express.json());
 //     })
 // );
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5001;
 
 // Use the routes
 app.use("/users", userRoutes); // All user-related routes will be under /users
