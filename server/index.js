@@ -12,13 +12,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.json());
 // Configuración de CORS
-app.use(
-    cors({
-        origin: "https://blue-sky-0c4158f10.5.azurestaticapps.net", // Permite solo el frontend de esta dirección
-        methods: ["GET", "POST", "DELETE", "PUT"], // Métodos permitidos
-        credentials: true, // Permite enviar cookies
-    })
-);
+// app.use(
+//     cors({
+//         origin: "https://blue-sky-0c4158f10.5.azurestaticapps.net", // Permite solo el frontend de esta dirección
+//         methods: ["GET", "POST", "DELETE", "PUT"], // Métodos permitidos
+//         credentials: true, // Permite enviar cookies
+//     })
+// );
 
 const port = process.env.PORT || 8080;
 
