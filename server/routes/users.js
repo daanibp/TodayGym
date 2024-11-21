@@ -189,7 +189,7 @@ async function sendEmail(newUser) {
     );
 
     // Send the verification email
-    const verificationUrl = `http://localhost:8080/users/verify-email?token=${verificationToken}`;
+    const verificationUrl = `https://regymserver.onrender.com/users/verify-email?token=${verificationToken}`;
 
     const mailOptions = {
         from: process.env.EMAIL_USER,
@@ -251,7 +251,7 @@ router.post("/forgot-password", async (req, res) => {
             { expiresIn: "1h" }
         );
 
-        const resetPasswordUrl = `http://localhost:3000/reset-password?token=${verificationToken}`; // Cambiar a la URL del frontend
+        const resetPasswordUrl = `https://regymserver.onrender.com/reset-password?token=${verificationToken}`; // Cambiar a la URL del frontend
 
         const mailOptions = {
             from: process.env.EMAIL_USER,
