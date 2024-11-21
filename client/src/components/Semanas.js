@@ -175,7 +175,7 @@ function Semanas() {
     }, [week, user.id]);
 
     return (
-        <div className="w-full">
+        <div className="w-full overflow-y-auto">
             <div
                 className="semana-header flex items-center justify-center py-2"
                 style={{

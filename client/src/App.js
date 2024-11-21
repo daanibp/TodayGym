@@ -20,6 +20,7 @@ import { SessionProvider } from "./context/SessionContext";
 import Progreso from "./pages/Progreso";
 import FavExercises from "./pages/FavExercises";
 import ExerciseHistory from "./pages/ExerciseHistory";
+import "./App.css";
 
 function App() {
     return (

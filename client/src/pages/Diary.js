@@ -918,7 +918,7 @@ function Diary() {
                     setIsEditable={setIsEditable}
                 />
             </div>
-            <div className="screen mt-10 flex justify-center">
+            <div className="h-full mt-10 flex justify-center overflow-y-hidden">
                 {currentView === "initial" && (
                     <div
                         className="initial flex flex-col items-center justify-center space-y-4"
@@ -953,7 +953,7 @@ function Diary() {
                     </div>
                 )}
                 {currentView === "pesas" && (
-                    <div className="pesas flex flex-col w-full">
+                    <div className="pesas overflow-y-auto flex flex-col w-full">
                         <div className="titulo text-center font-bold text-white text-xl mt-6 mb-6">
                             ENTRENAMIENTO DE PESAS
                         </div>
@@ -1147,7 +1147,7 @@ function Diary() {
                     </div>
                 )}
                 {currentView === "cardio" && (
-                    <div className="cardio flex flex-col w-full">
+                    <div className="cardio flex flex-col w-full overflow-y-auto">
                         <div className="titulo text-center font-bold text-white text-xl mt-6 mb-6">
                             ENTRENAMIENTO DE CARDIO
                         </div>

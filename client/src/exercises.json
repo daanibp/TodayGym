@@ -134,19 +134,19 @@
     {
         "id": 33,
         "name": "Remo con Barra",
-        "image": "RemoconBarra.png",
+        "image": "RemoConBarra.png",
         "category": "Espalda"
     },
     {
         "id": 34,
         "name": "Remo en T",
-        "image": "RemoenT.png",
+        "image": "RemoEnT.png",
         "category": "Espalda"
     },
     {
         "id": 35,
         "name": "Remo en Smith",
-        "image": "RemoenSmith.png",
+        "image": "RemoEnSmith.png",
         "category": "Espalda"
     },
     {
@@ -200,7 +200,7 @@
     {
         "id": 44,
         "name": "Remo con Mancuernas",
-        "image": "RemoconMancuernas.png",
+        "image": "RemoConMancuernas.png",
         "category": "Espalda"
     },
     {
@@ -242,7 +242,7 @@
     {
         "id": 65,
         "name": "Extensiones de Cuádriceps",
-        "image": "ExtensionesdeCuádriceps.png",
+        "image": "ExtensionesDeCuádriceps.png",
         "category": "Pierna"
     },
     {
@@ -548,25 +548,25 @@
     {
         "id": 150,
         "name": "Curl con Mancuernas",
-        "image": "CurlconMancuernas.png",
+        "image": "CurlConMancuernas.png",
         "category": "Bíceps"
     },
     {
         "id": 151,
         "name": "Curl con Barra",
-        "image": "CurlconBarra.png",
+        "image": "CurlConBarra.png",
         "category": "Bíceps"
     },
     {
         "id": 152,
         "name": "Curl con Mancuerna Scott",
-        "image": "CurlconMancuernaScott.png",
+        "image": "CurlConMancuernaScott.png",
         "category": "Bíceps"
     },
     {
         "id": 153,
         "name": "Curl con Barra Scott",
-        "image": "CurlconBarraScott.png",
+        "image": "CurlConBarraScott.png",
         "category": "Bíceps"
     },
     {
@@ -632,7 +632,7 @@
     {
         "id": 183,
         "name": "Elevaciones de Piernas",
-        "image": "ElevacionesdePiernas.png",
+        "image": "ElevacionesDePiernas.png",
         "category": "Abdominales"
     },
     {

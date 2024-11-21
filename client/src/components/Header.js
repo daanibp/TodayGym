@@ -10,7 +10,7 @@ const Header = () => {
     };
 
     return (
-        <div className="header flex items-center justify-between px-4 py-4 w-full z-50">
+        <div className="header flex items-center justify-between px-4 py-4 w-full z-50 fixed top-0 bg-neutral-900">
             <div className="perfil w-16 justify-center">
                 <button
                     className="w-16"
