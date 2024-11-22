@@ -15,6 +15,8 @@ function Login({ onLogin }) {
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
+    const [acceptTerms, setAcceptTerms] = useState(false);
+
     const location = useLocation();
     const [activeTab, setActiveTab] = useState(
         new URLSearchParams(location.search).get("tab") === "register"
@@ -94,6 +96,11 @@ function Login({ onLogin }) {
         // Validar que la contraseña no esté vacía
         if (passwordR.length < 6) {
             setErrorR("La contraseña debe tener al menos 6 caracteres.");
+            return;
+        }
+
+        if (!acceptTerms) {
+            setErrorR("Debes aceptar los términos y condiciones.");
             return;
         }
 
@@ -322,6 +329,30 @@ function Login({ onLogin }) {
                                     }
                                     autoComplete="new-password"
                                 />
+                            </div>
+                            <div className="mb-6">
+                                <label className="inline-flex items-start">
+                                    <input
+                                        type="checkbox"
+                                        id="acceptTerms"
+                                        className="mr-2 mt-1"
+                                        checked={acceptTerms}
+                                        onChange={(e) =>
+                                            setAcceptTerms(e.target.checked)
+                                        }
+                                    />
+                                    <span className="text-sm md:text-base text-white">
+                                        Acepto los{" "}
+                                        <a
+                                            href="/politica-de-privacidad"
+                                            target="_blank"
+                                            className="text-blue-500 underline hover:text-blue-700"
+                                        >
+                                            términos y condiciones
+                                        </a>{" "}
+                                        y la política de privacidad.
+                                    </span>
+                                </label>
                             </div>
                             <button
                                 type="submit"

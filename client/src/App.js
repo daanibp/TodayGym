@@ -21,6 +21,7 @@ import Progreso from "./pages/Progreso";
 import FavExercises from "./pages/FavExercises";
 import ExerciseHistory from "./pages/ExerciseHistory";
 import "./App.css";
+import PoliticaDePrivacidad from "./pages/PoliticaDePrivacidad";
 
 function App() {
     return (
@@ -55,6 +56,10 @@ function AuthRoutes() {
                         path="/forgot-password"
                         element={<ForgotPassword />}
                     />
+                    <Route
+                        path="/politica-de-privacidad"
+                        element={<PoliticaDePrivacidad />}
+                    />
                     <Route path="/reset-password" element={<ResetPassword />} />
                     <Route path="*" element={<Navigate to="/welcome" />} />
                 </Routes>
@@ -84,6 +89,10 @@ function AuthRoutes() {
                         <Route
                             path="/profile"
                             element={<Profile onLogout={logout} />}
+                        />
+                        <Route
+                            path="/politica-de-privacidad"
+                            element={<PoliticaDePrivacidad />}
                         />
                         <Route
                             path="*"

@@ -46,14 +46,44 @@ router.post("/", async (req, res) => {
 // PUT update an existing user
 router.put("/updateUserById/:id", async (req, res) => {
     try {
+        // Verificar si el cuerpo de la solicitud contiene datos
+        if (!req.body || Object.keys(req.body).length === 0) {
+            return res
+                .status(400)
+                .json({ error: "No data provided to update" });
+        }
+
         const user = await User.findByPk(req.params.id);
+
         if (user) {
-            await user.update(req.body);
+            // Actualizar solo los campos permitidos para evitar actualizaciones indeseadas
+            const { name, surnames, password } = req.body;
+
+            // Validación de campos requeridos
+            if (!name || !surnames) {
+                return res
+                    .status(400)
+                    .json({ error: "Nombre y apellidos son requeridos" });
+            }
+
+            // Si la contraseña fue proporcionada, puedes agregar una lógica para actualizarla de manera segura (ejemplo: hashing)
+            if (password) {
+                const hashedPassword = await bcrypt.hash(password, 10);
+                user.password = hashedPassword;
+            }
+
+            // Actualizamos el usuario con los datos proporcionados
+            await user.update({
+                name,
+                surnames,
+                password: user.password,
+            });
             res.json(user);
         } else {
             res.status(404).json({ error: "User not found" });
         }
     } catch (error) {
+        console.error("Error al actualizar el usuario:", error);
         res.status(500).json({ error: "Failed to update user" });
     }
 });
