@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import backgroundImage from "../images/BG2.jpg";
 import "../estilos/Login.css";
+import { FaSpinner } from "react-icons/fa";
 
 function Login({ onLogin }) {
     const [email, setEmail] = useState("");
@@ -16,6 +17,8 @@ function Login({ onLogin }) {
     const navigate = useNavigate();
 
     const [acceptTerms, setAcceptTerms] = useState(false);
+
+    const [loading, setLoading] = useState(false);
 
     const location = useLocation();
     const [activeTab, setActiveTab] = useState(
@@ -44,6 +47,8 @@ function Login({ onLogin }) {
         // Resetea el error al hacer un nuevo intento de login
         setError(null);
 
+        setLoading(true); // Activar loading
+
         try {
             // Enviar los datos al servidor
             const response = await fetch(
@@ -59,6 +64,8 @@ function Login({ onLogin }) {
 
             const data = await response.json();
 
+            setLoading(false);
+
             if (response.ok) {
                 // Aquí recibes tanto el token como los datos del usuario
                 const { token, user } = data;
@@ -73,6 +80,7 @@ function Login({ onLogin }) {
                 setError(data.error);
             }
         } catch (error) {
+            setLoading(false);
             setError("Hubo un problema al intentar iniciar sesión.");
         }
     };
@@ -106,6 +114,7 @@ function Login({ onLogin }) {
 
         // Resetea el error al hacer un nuevo intento de registro
         setErrorR(null);
+        setLoading(true);
 
         // Obtener la fecha actual en formato yyyy-mm-dd
         const currentDate = new Date();
@@ -132,6 +141,8 @@ function Login({ onLogin }) {
 
             const data = await response.json();
 
+            setLoading(false);
+
             if (response.ok) {
                 setSuccessMessageR(data.message);
                 setErrorR("");
@@ -145,6 +156,7 @@ function Login({ onLogin }) {
                 setSuccessMessageR("");
             }
         } catch (error) {
+            setLoading(false);
             setErrorR("Hubo un problema al intentar realizar el registro.");
         }
     };
@@ -238,8 +250,15 @@ function Login({ onLogin }) {
                                 type="submit"
                                 className="w-full px-4 py-2 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition duration-300"
                                 onClick={handleLogin}
+                                disabled={loading} // Desactiva el botón mientras se está cargando
                             >
-                                Iniciar Sesión
+                                {loading ? (
+                                    <div className="flex justify-center items-center">
+                                        <FaSpinner className="animate-spin text-white text-2xl" />
+                                    </div>
+                                ) : (
+                                    "Iniciar Sesión"
+                                )}
                             </button>
                             <p className="text-center mt-4 md:mt-6">
                                 <Link
@@ -358,8 +377,15 @@ function Login({ onLogin }) {
                                 type="submit"
                                 className="w-full px-4 py-2 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition duration-300"
                                 onClick={handleRegister}
+                                disabled={loading} // Desactiva el botón mientras se está cargando
                             >
-                                Registrarse
+                                {loading ? (
+                                    <div className="flex justify-center items-center">
+                                        <FaSpinner className="animate-spin text-white text-2xl" />
+                                    </div>
+                                ) : (
+                                    "Registrarse"
+                                )}
                             </button>
                         </form>
                     )}

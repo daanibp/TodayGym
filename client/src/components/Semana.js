@@ -33,7 +33,7 @@ const Semana = () => {
         const fetchDiasConSesion = async () => {
             try {
                 const response = await fetch(
-                    "http://localhost:8080/sessions/week"
+                    "https://regymserver.onrender.com/sessions/week"
                 );
                 const data = await response.json();
 

@@ -22,6 +22,7 @@ import FavExercises from "./pages/FavExercises";
 import ExerciseHistory from "./pages/ExerciseHistory";
 import "./App.css";
 import PoliticaDePrivacidad from "./pages/PoliticaDePrivacidad";
+import VerificatedEmail from "./pages/VerificatedEmail";
 
 function App() {
     return (
@@ -61,6 +62,10 @@ function AuthRoutes() {
                         element={<PoliticaDePrivacidad />}
                     />
                     <Route path="/reset-password" element={<ResetPassword />} />
+                    <Route
+                        path="/verify-email"
+                        element={<VerificatedEmail />}
+                    />
                     <Route path="*" element={<Navigate to="/welcome" />} />
                 </Routes>
             ) : (
@@ -69,6 +74,10 @@ function AuthRoutes() {
                     <Routes>
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/diary" element={<Diary />} />
+                        <Route
+                            path="/verify-email"
+                            element={<VerificatedEmail />}
+                        />
                         <Route
                             path="/exercises"
                             element={<WeightExercises />}

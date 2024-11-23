@@ -237,7 +237,9 @@ router.get("/verify-email", async (req, res) => {
     const { token } = req.query;
 
     if (!token) {
-        return res.status(400).json({ error: "Falta el token." });
+        return res.redirect(
+            `https://regymclient.onrender.com/verify-email?status=error&message=Falta%20el%20token`
+        );
     }
 
     try {
@@ -245,22 +247,28 @@ router.get("/verify-email", async (req, res) => {
 
         const user = await User.findOne({ where: { email: decoded.email } });
         if (!user) {
-            return res.status(404).json({ error: "Usuario no encontrado." });
+            return res.redirect(
+                `https://regymclient.onrender.com/verify-email?status=error&message=Usuario%20no%20encontrado`
+            );
         }
 
         if (user.state === "Active") {
-            return res
-                .status(400)
-                .json({ message: "El E-mail ya está verificado." });
+            return res.redirect(
+                `https://regymclient.onrender.com/verify-email?status=error&message=El%20E-mail%20ya%20está%20verificado`
+            );
         }
 
         user.state = "Active";
         await user.save();
 
-        res.status(200).json({ message: "E-mail verificado exitosamente." });
+        return res.redirect(
+            `https://regymclient.onrender.com/verify-email?status=success&message=E-mail%20verificado%20exitosamente`
+        );
     } catch (error) {
-        console.error("Error: ", error.message);
-        return res.status(400).json({ error: "Token inválido o expirado." });
+        console.error("Error:", error.message);
+        return res.redirect(
+            `https://regymclient.onrender.com/verify-email?status=error&message=Token%20inválido%20o%20expirado`
+        );
     }
 });
 
@@ -281,7 +289,7 @@ router.post("/forgot-password", async (req, res) => {
             { expiresIn: "1h" }
         );
 
-        const resetPasswordUrl = `https://regymserver.onrender.com/reset-password?token=${verificationToken}`; // Cambiar a la URL del frontend
+        const resetPasswordUrl = `https://regymserver.onrender.com/reset-password?token=${verificationToken}`;
 
         const mailOptions = {
             from: process.env.EMAIL_USER,

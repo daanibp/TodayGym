@@ -7,6 +7,7 @@ import { SessionContext } from "../context/SessionContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import { MdDeleteForever } from "react-icons/md";
 import "../estilos/Diary.css";
+import { FaSpinner } from "react-icons/fa";
 
 function Diary() {
     const [currentView, setCurrentView] = useState("initial");
@@ -21,6 +22,11 @@ function Diary() {
     const [intervals, setIntervals] = useState([]);
 
     const [isEditable, setIsEditable] = useState(false);
+
+    const [isLoadingPesas, setIsLoadingPesas] = useState(false);
+    const [isLoadingCardio, setIsLoadingCardio] = useState(false);
+    const [isPesasDisabled, setIsPesasDisabled] = useState(false);
+    const [isCardioDisabled, setIsCardioDisabled] = useState(false);
 
     const {
         selectedDate,
@@ -209,11 +215,15 @@ function Diary() {
     }, [fetchExercisesAndSets, fetchExercisesAndIntervals, currentView]);
 
     const openPesas = async () => {
+        setIsLoadingPesas(true);
+        setIsPesasDisabled(true); // Deshabilitar el botón de Pesas
+        setIsCardioDisabled(true); // Deshabilitar el botón de Cardio
+
         const session = createSession("Pesas");
         const session_date = formatLocalDate(selectedDate);
         try {
             const response = await fetch(
-                `https://regymserver.onrender.com/sessions/pesas/${session_date}`,
+                `https://regymserver.onrender.com/sessions/pesas?date=${session_date}&userId=${user.id}`,
                 {
                     method: "POST",
                     headers: {
@@ -243,15 +253,23 @@ function Diary() {
             }
         } catch (error) {
             console.error("Error creating or fetching session:", error);
+        } finally {
+            setIsLoadingPesas(false); // Detener el estado de carga
+            setIsPesasDisabled(false); // Habilitar el botón de Pesas
+            setIsCardioDisabled(false); // Habilitar el botón de Cardio
         }
     };
 
     const openCardio = async () => {
+        setIsLoadingCardio(true);
+        setIsCardioDisabled(true); // Deshabilitar el botón de Cardio
+        setIsPesasDisabled(true); // Deshabilitar el botón de Pesas
+
         const session = createSession("Cardio");
         const session_date = formatLocalDate(selectedDate);
         try {
             const response = await fetch(
-                `https://regymserver.onrender.com/sessions/cardio/${session_date}`,
+                `https://regymserver.onrender.com/sessions/cardio?date=${session_date}&userId=${user.id}`,
                 {
                     method: "POST",
                     headers: {
@@ -281,6 +299,10 @@ function Diary() {
             }
         } catch (error) {
             console.error("Error creating or fetching session:", error);
+        } finally {
+            setIsLoadingCardio(false); // Detener el estado de carga
+            setIsPesasDisabled(false); // Habilitar el botón de Pesas
+            setIsCardioDisabled(false); // Habilitar el botón de Cardio
         }
     };
 
@@ -926,27 +948,49 @@ function Diary() {
                     >
                         <div className="pesas flex flex-col items-center justify-center text-white w-full px-8 py-4 text-2xl">
                             <button
-                                className="shadow-lg cursor-pointer mb-2"
+                                className={`shadow-lg cursor-pointer mb-2 ${
+                                    isPesasDisabled
+                                        ? "opacity-50 cursor-not-allowed"
+                                        : ""
+                                }`}
                                 onClick={openPesas}
+                                disabled={isPesasDisabled}
                             >
                                 <img
                                     src={BeastMode}
                                     alt="Pesas"
                                     className="w-48 responsive-initial-height"
                                 />
+                                {isLoadingPesas && (
+                                    <div className="absolute flex items-center justify-center w-full h-full">
+                                        <div className="spinner-border animate-spin text-white"></div>{" "}
+                                        <FaSpinner className="animate-spin text-white text-2xl" />
+                                    </div>
+                                )}
                             </button>
                             Pesas
                         </div>
                         <div className="cardio flex flex-col items-center justify-center text-white w-full px-8 py-4 text-2xl">
                             <button
-                                className="shadow-lg cursor-pointer mb-2"
+                                className={`shadow-lg cursor-pointer mb-2 ${
+                                    isCardioDisabled
+                                        ? "opacity-50 cursor-not-allowed"
+                                        : ""
+                                }`}
                                 onClick={openCardio}
+                                disabled={isCardioDisabled}
                             >
                                 <img
                                     src={Cardio}
                                     alt="Cardio"
                                     className="w-48 responsive-initial-height"
                                 />
+                                {isLoadingCardio && (
+                                    <div className="absolute flex items-center justify-center w-full h-full">
+                                        <div className="spinner-border animate-spin text-white"></div>{" "}
+                                        <FaSpinner className="animate-spin text-white text-2xl" />
+                                    </div>
+                                )}
                             </button>
                             Cardio
                         </div>
