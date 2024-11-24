@@ -97,7 +97,6 @@ router.get("/cardio/getSessionByDate", async (req, res) => {
     }
 });
 
-// Ruta para obtener sesiones de una semana específica
 router.get("/week", async (req, res) => {
     try {
         // Obtener los parámetros de inicio y fin desde la query string
@@ -127,20 +126,56 @@ router.get("/week", async (req, res) => {
                 },
                 user_id: userId,
             },
-            attributes: ["session_date"], // Solo seleccionamos las fechas
+            attributes: ["id", "session_date"], // Incluimos los IDs para buscar ejercicios
         });
 
-        // Extraer y formatear las fechas de las sesiones para la respuesta
-        const sessionDates = sessions.map((session) =>
+        if (!sessions || sessions.length === 0) {
+            return res.status(404).json({ message: "No sessions found" });
+        }
+
+        // Extraer los IDs de las sesiones
+        const sessionIds = sessions.map((session) => session.id);
+
+        // Consultar los ejercicios asociados a estas sesiones
+        const exercises = await Exercise.findAll({
+            where: {
+                session_id: {
+                    [Op.in]: sessionIds, // Filtrar por los session_id de las sesiones obtenidas
+                },
+            },
+            attributes: ["session_id"], // Solo necesitamos los IDs de las sesiones con ejercicios
+        });
+
+        if (!exercises || exercises.length === 0) {
+            return res
+                .status(404)
+                .json({ message: "No exercises found for these sessions" });
+        }
+
+        // Obtener los IDs únicos de las sesiones con ejercicios
+        const sessionIdsWithExercises = exercises.map(
+            (exercise) => exercise.session_id
+        );
+
+        // Filtrar las sesiones que tienen ejercicios asociados
+        const filteredSessions = sessions.filter((session) =>
+            sessionIdsWithExercises.includes(session.id)
+        );
+
+        // Extraer y formatear las fechas de las sesiones filtradas para la respuesta
+        const sessionDates = filteredSessions.map((session) =>
             format(new Date(session.session_date), "yyyy-MM-dd")
         );
 
-        // Enviar las fechas de los días con sesiones
+        // Enviar las fechas de los días con sesiones que tienen ejercicios
         res.status(200).json(sessionDates);
     } catch (error) {
-        console.error("Error fetching sessions for the week:", error);
+        console.error(
+            "Error fetching sessions with exercises for the week:",
+            error
+        );
         res.status(500).json({
-            error: "Failed to fetch sessions for the week",
+            error: "Failed to fetch sessions with exercises for the week",
         });
     }
 });
@@ -257,6 +292,7 @@ router.get("/getDaysWithSession/:id", async (req, res) => {
         res.status(500).json({ error: "Error getting days with sessions" });
     }
 });
+
 // Ruta para obtener sesiones de una semana específica y el número de sets por categoría
 router.get("/week/getNumberOfSetsByCategory", async (req, res) => {
     try {

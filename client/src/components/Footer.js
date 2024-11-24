@@ -4,49 +4,28 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <div className="w-full fixed bottom-0 left-0 right-0 z-40">
-            <div
-                style={{
-                    position: "absolute",
-                    bottom: "-60px",
-                    left: "-30%",
-                    right: "-30%",
-                    height: "140px", // Altura que simula la curva
-                    backgroundColor: "#890000",
-                    borderRadius: "50% 50% 0 0",
-                    zIndex: 1,
-                }}
-            ></div>
-            <div
-                style={{
-                    position: "relative",
-                    backgroundColor: "#890000",
-                    zIndex: 1,
-                    height: "60px",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    color: "white",
-                    fontWeight: "bold",
-                }}
-            >
+            {/* Curva decorativa */}
+            <div className="absolute bottom-[-60px] left-[-30%] right-[-30%] h-[140px] bg-[#890000] rounded-t-full z-1"></div>
+
+            {/* Barra de navegación */}
+            <div className="relative bg-[#890000] h-[60px] flex justify-around items-center text-white font-bold z-10">
+                {/* Enlaces del footer */}
                 <Link
                     to="/dashboard"
-                    className="text-white text-center md:text-lg lg:text-xl"
+                    className="flex-1 text-center text-white md:text-lg lg:text-xl flex justify-center items-center"
                 >
                     Panel
                 </Link>
                 <Link
-                    to={{
-                        pathname: "/diary",
-                    }}
+                    to="/diary"
                     state={{ currentView: "initial" }}
-                    className="text-white text-center md:text-lg lg:text-xl"
+                    className="flex-1 text-center text-white md:text-lg lg:text-xl flex justify-center items-center"
                 >
                     Diario
                 </Link>
                 <Link
                     to="/progress"
-                    className="text-white text-center md:text-lg lg:text-xl"
+                    className="flex-1 text-center text-white md:text-lg lg:text-xl flex justify-center items-center"
                 >
                     Progreso
                 </Link>

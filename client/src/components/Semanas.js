@@ -143,7 +143,6 @@ function Semanas() {
 
                 const data = await response.json();
 
-                // Asumiendo que `data` es un array de fechas
                 setSessionDays(data);
             } catch (error) {
                 console.error("Error fetching session days:", error);
