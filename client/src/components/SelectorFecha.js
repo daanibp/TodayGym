@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 
 function SelectorFecha({ onClose, onAccept }) {
     const today = new Date();
-    console.log("Today Date en SelectorFecha:", today);
     const [selectedDay, setSelectedDay] = useState(today.getDate());
     const [selectedMonth, setSelectedMonth] = useState(today.getMonth());
     const [selectedYear, setSelectedYear] = useState(today.getFullYear());

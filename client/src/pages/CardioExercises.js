@@ -37,7 +37,6 @@ function CardioExercises() {
 
     // Añadir ejercicio a la sesión
     const addExercise = async (exercise, image) => {
-        console.log("Exercise: ", exercise);
         let idSession = sessionIdCardio;
 
         const sessionDate = formatLocalDate(selectedDate);
@@ -48,7 +47,6 @@ function CardioExercises() {
             );
 
             if (!response.ok) {
-                console.log("Creando una sesión nueva...");
                 const session = createSession("Cardio");
                 try {
                     const response = await fetch(
@@ -64,7 +62,6 @@ function CardioExercises() {
 
                     if (response.ok) {
                         const sessionData = await response.json();
-                        console.log("SessionData: ", sessionData);
                         idSession = sessionData.id;
                         updateSessionIdCardio(sessionData.id);
                     } else {
@@ -79,7 +76,6 @@ function CardioExercises() {
         }
 
         const newExercise = createExercise(idSession, exercise.name, image);
-        console.log("newExercise: ", newExercise);
 
         const response = await fetch(
             "https://regymserver.onrender.com/exercises",

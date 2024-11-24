@@ -58,7 +58,6 @@ function WeightExercises() {
 
     // Añadir ejercicio a la sesión
     const addExercise = async (exercise, category, image) => {
-        console.log("Exercise: ", exercise);
         let idSession = sessionIdPesas;
 
         const sessionDate = formatLocalDate(selectedDate);
@@ -70,7 +69,6 @@ function WeightExercises() {
 
             if (!response.ok) {
                 // Crear sesion si no hay ninguna
-                console.log("Creando una sesión nueva...");
                 const session = createSession("Pesas");
                 try {
                     const response = await fetch(
@@ -86,7 +84,6 @@ function WeightExercises() {
 
                     if (response.ok) {
                         const sessionData = await response.json();
-                        console.log("SessionData: ", sessionData);
                         idSession = sessionData.id;
                         updateSessionIdPesas(sessionData.id);
                     } else {
@@ -106,7 +103,6 @@ function WeightExercises() {
             category,
             image
         );
-        console.log("newExercise: ", newExercise);
 
         const response = await fetch(
             "https://regymserver.onrender.com/exercises",

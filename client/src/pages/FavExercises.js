@@ -22,7 +22,6 @@ function FavExercises() {
             const data = await response.json();
             setExercises(data.exercises || []); // Evitar que sea undefined
             setFilteredExercises(groupByCategory(data.exercises || [])); // Usar un array vacío si no hay datos
-            console.log("Ejercicios:", data.exercises);
         };
         getExercises();
     }, [user.id, type]);

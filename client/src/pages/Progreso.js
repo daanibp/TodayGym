@@ -68,7 +68,6 @@ function Progreso() {
                 );
                 const data = await response.json();
                 setDaysWithSession(data.days);
-                console.log("Days With Session:", data.days);
             };
 
             getNumberOfSessions();
@@ -88,9 +87,7 @@ function Progreso() {
                 const data = await response.json();
                 setExercisesFav(data.exercisesFav);
                 exercisesF = data.exercisesFav;
-                console.log("Exercises Fav:", data.exercisesFav);
                 setMaxNumberOfSets(data.max);
-                console.log("Max Number of Sets:", data.max);
             };
 
             const getAllMaxWeightLifted = async () => {
@@ -124,7 +121,6 @@ function Progreso() {
                         .flat()
                         .filter((item) => item !== undefined);
                     setAllMaxWeightLifted(allMaxWeight);
-                    console.log("All Max Weight Lifted:", allMaxWeight);
                 }
             };
 
@@ -146,9 +142,7 @@ function Progreso() {
                 const data = await response.json();
                 setExercisesCardioFav(data.exercisesFav);
                 exercisesCardioF = data.exercisesFav;
-                console.log("Exercises Cardio Fav:", data.exercisesFav);
                 setMaxNumberOfIntervals(data.max);
-                console.log("Max Number of Intervals:", data.max);
             };
 
             const getAllMaxDistance = async () => {
@@ -182,7 +176,6 @@ function Progreso() {
                         .flat()
                         .filter((item) => item !== undefined);
                     setAllMaxDistance(allMaxDistance);
-                    console.log("All Max Distance:", allMaxDistance);
                 }
             };
 

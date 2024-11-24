@@ -163,25 +163,25 @@ function Login({ onLogin }) {
 
     return (
         <div
-            className="relative h-screen bg-cover bg-center"
+            className="relative min-h-screen bg-cover bg-center"
             style={{ backgroundImage: `url(${backgroundImage})` }}
         >
-            <div className="flex flex-col items-center justify-center h-full text-center text-white bg-black bg-opacity-60 overflow-auto responsive-container">
+            <div className="flex flex-col items-center justify-center min-h-screen text-center text-white bg-black bg-opacity-60 p-4 md:p-8">
                 <h1
-                    className="text-5xl md:text-8xl lg:text-8xl font-bold mb-4 lg:mb-0 responsive-heading"
+                    className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 lg:mb-0"
                     style={{ fontFamily: "Akronim, cursive", color: "#890000" }}
                 >
                     El cambio es{" "}
-                    <span className="block text-5xl md:text-8xl lg:text-8xl responsive-heading">
+                    <span className="block text-5xl sm:text-5xl md:text-7xl lg:text-8xl">
                         HOY
                     </span>
                 </h1>
 
-                <div className="bg-black bg-opacity-80 rounded-3xl p-4 md:p-8 my-6 lg:my-2 md:my-2 w-11/12 max-w-lg md:max-w-2xl mx-auto">
+                <div className="bg-black bg-opacity-80 rounded-3xl p-4 md:p-8 mt-6 w-full max-w-sm sm:max-w-lg lg:max-w-2xl mx-auto">
                     {/* Tab selector */}
-                    <div className="flex justify-center space-x-2 mb-6">
+                    <div className="flex justify-between space-x-1 mb-4">
                         <button
-                            className={`w-full md:w-auto px-4 py-2 font-bold text-white rounded-tl-lg ${
+                            className={`flex-1 py-2 font-bold text-white rounded-tl-lg ${
                                 activeTab === "login"
                                     ? "bg-red-600"
                                     : "bg-gray-600"
@@ -191,7 +191,7 @@ function Login({ onLogin }) {
                             Iniciar Sesión
                         </button>
                         <button
-                            className={`w-full md:w-auto px-4 py-2 font-bold text-white rounded-tr-lg ${
+                            className={`flex-1 py-2 font-bold text-white rounded-tr-lg ${
                                 activeTab === "register"
                                     ? "bg-red-600"
                                     : "bg-gray-600"
@@ -204,14 +204,14 @@ function Login({ onLogin }) {
 
                     {/* Formulario de Iniciar Sesión */}
                     {activeTab === "login" && (
-                        <form className="text-left space-y-4">
-                            <h2 className="text-lg md:text-xl font-semibold text-center mb-4 md:mb-6">
+                        <form className="space-y-4">
+                            <h2 className="text-lg md:text-xl font-semibold text-center mb-4">
                                 Bienvenido al cambio
                             </h2>
-                            <div className="mb-4 md:mb-6">
+                            <div>
                                 <label
                                     htmlFor="email"
-                                    className="block text-sm md:text-base"
+                                    className="block text-left text-sm md:text-base"
                                 >
                                     E-mail
                                 </label>
@@ -221,16 +221,14 @@ function Login({ onLogin }) {
                                     className="w-full px-3 py-2 border-b border-gray-400 bg-transparent text-white outline-none"
                                     placeholder="Ingresa tu email"
                                     value={email}
-                                    onChange={(e) => {
-                                        setEmail(e.target.value);
-                                    }}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     autoComplete="email"
                                 />
                             </div>
-                            <div className="mb-4 md:mb-6">
+                            <div>
                                 <label
                                     htmlFor="password"
-                                    className="block text-sm md:text-base"
+                                    className="block text-left text-sm md:text-base"
                                 >
                                     Contraseña
                                 </label>
@@ -250,7 +248,7 @@ function Login({ onLogin }) {
                                 type="submit"
                                 className="w-full px-4 py-2 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition duration-300"
                                 onClick={handleLogin}
-                                disabled={loading} // Desactiva el botón mientras se está cargando
+                                disabled={loading}
                             >
                                 {loading ? (
                                     <div className="flex justify-center items-center">
@@ -260,10 +258,10 @@ function Login({ onLogin }) {
                                     "Iniciar Sesión"
                                 )}
                             </button>
-                            <p className="text-center mt-4 md:mt-6">
+                            <p className="text-center mt-4 text-sm">
                                 <Link
                                     to="/forgot-password"
-                                    className="text-sm text-gray-300 underline"
+                                    className="text-gray-300 underline"
                                 >
                                     ¿Olvidaste la contraseña?
                                 </Link>
@@ -273,14 +271,14 @@ function Login({ onLogin }) {
 
                     {/* Formulario de Registro */}
                     {activeTab === "register" && (
-                        <form className="text-left space-y-4">
-                            <h2 className="text-lg md:text-xl font-semibold text-center mb-4 md:mb-6">
+                        <form className="space-y-4">
+                            <h2 className="text-lg md:text-xl font-semibold text-center mb-4">
                                 Crea tu cuenta
                             </h2>
-                            <div className="mb-4 md:mb-6">
+                            <div>
                                 <label
                                     htmlFor="nombre"
-                                    className="block text-sm md:text-base"
+                                    className="block text-left text-sm md:text-base"
                                 >
                                     Nombre
                                 </label>
@@ -294,10 +292,10 @@ function Login({ onLogin }) {
                                     autoComplete="given-name"
                                 />
                             </div>
-                            <div className="mb-4 md:mb-6">
+                            <div>
                                 <label
                                     htmlFor="apellidos"
-                                    className="block text-sm md:text-base"
+                                    className="block text-left text-sm md:text-base"
                                 >
                                     Apellidos
                                 </label>
@@ -313,10 +311,10 @@ function Login({ onLogin }) {
                                     autoComplete="family-name"
                                 />
                             </div>
-                            <div className="mb-4 md:mb-6">
+                            <div>
                                 <label
                                     htmlFor="email"
-                                    className="block text-sm md:text-base"
+                                    className="block text-left text-sm md:text-base"
                                 >
                                     E-mail
                                 </label>
@@ -330,10 +328,10 @@ function Login({ onLogin }) {
                                     autoComplete="email"
                                 />
                             </div>
-                            <div className="mb-6">
+                            <div>
                                 <label
                                     htmlFor="password"
-                                    className="block text-sm md:text-base"
+                                    className="block text-left text-sm md:text-base"
                                 >
                                     Contraseña
                                 </label>
@@ -349,7 +347,7 @@ function Login({ onLogin }) {
                                     autoComplete="new-password"
                                 />
                             </div>
-                            <div className="mb-6">
+                            <div className="mb-6 text-left">
                                 <label className="inline-flex items-start">
                                     <input
                                         type="checkbox"
@@ -377,7 +375,7 @@ function Login({ onLogin }) {
                                 type="submit"
                                 className="w-full px-4 py-2 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition duration-300"
                                 onClick={handleRegister}
-                                disabled={loading} // Desactiva el botón mientras se está cargando
+                                disabled={loading}
                             >
                                 {loading ? (
                                     <div className="flex justify-center items-center">
@@ -389,18 +387,15 @@ function Login({ onLogin }) {
                             </button>
                         </form>
                     )}
+                    {/* Mensajes de error y éxito */}
                     {error && activeTab === "login" && (
-                        <div style={{ color: "red", marginTop: "10px" }}>
-                            {error}
-                        </div>
+                        <div className="text-red-500 mt-2">{error}</div>
                     )}
                     {errorR && activeTab === "register" && (
-                        <div style={{ color: "red", marginTop: "10px" }}>
-                            {errorR}
-                        </div>
+                        <div className="text-red-500 mt-2">{errorR}</div>
                     )}
                     {successMessageR && activeTab === "register" && (
-                        <div style={{ color: "green", marginTop: "10px" }}>
+                        <div className="text-green-500 mt-2">
                             {successMessageR}
                         </div>
                     )}

@@ -62,13 +62,8 @@ function Diary() {
                 const data = await response.json();
 
                 if (response.ok && data) {
-                    console.log("Sesión encontrada:", data);
                     updateSessionIdPesas(data.id); // Actualiza el sessionId en el contexto
                 } else {
-                    console.log(
-                        "No se encontró sesión para la fecha:",
-                        sessionDate
-                    );
                     updateSessionIdPesas(null);
                     setExercises([]);
                     setSets([]);
@@ -88,13 +83,8 @@ function Diary() {
                 const data = await response.json();
 
                 if (response.ok && data) {
-                    console.log("Sesión de cardio encontrada:", data);
                     updateSessionIdCardio(data.id); // Actualiza el sessionId en el contexto
                 } else {
-                    console.log(
-                        "No se encontró sesión de cardio para la fecha:",
-                        sessionDate
-                    );
                     updateSessionIdCardio(null); // Limpia el sessionId si no se encuentra sesión
                     setExercisesCardio([]);
                     setIntervals([]);
@@ -123,7 +113,6 @@ function Diary() {
 
     const fetchExercisesAndSets = useCallback(async () => {
         if (!sessionIdPesas) {
-            console.log("No session_id found.");
             setExercises([]);
             setSets([]);
             return;
@@ -137,10 +126,8 @@ function Diary() {
 
             if (responseExercises.ok) {
                 setExercises(exercisesData);
-                console.log("Exercises:", exercisesData);
             } else {
                 setExercises([]);
-                console.log("No exercises found for this session.");
             }
 
             const responseSets = await fetch(
@@ -150,10 +137,8 @@ function Diary() {
 
             if (responseSets.ok) {
                 setSets(setsData);
-                console.log("Sets:", setsData);
             } else {
                 setSets([]);
-                console.log("Error fetching sets:", setsData.message);
             }
         } catch (error) {
             console.error("Error fetching exercises or sets:", error);
@@ -162,7 +147,6 @@ function Diary() {
 
     const fetchExercisesAndIntervals = useCallback(async () => {
         if (!sessionIdCardio) {
-            console.log("No session_id found.");
             setExercisesCardio([]);
             setIntervals([]);
             return;
@@ -176,10 +160,8 @@ function Diary() {
 
             if (responseExercises.ok) {
                 setExercisesCardio(exercisesData);
-                console.log("Cardio Exercises:", exercisesData);
             } else {
                 setExercisesCardio([]);
-                console.log("No cardio exercises found for this session.");
             }
 
             const responseIntervals = await fetch(
@@ -189,13 +171,8 @@ function Diary() {
 
             if (responseIntervals.ok) {
                 setIntervals(intervalsData);
-                console.log("Cardio intervals:", intervalsData);
             } else {
                 setIntervals([]);
-                console.log(
-                    "Error fetching cardio intervals:",
-                    intervalsData.message
-                );
             }
         } catch (error) {
             console.error(
@@ -236,16 +213,6 @@ function Diary() {
             if (response.ok) {
                 const sessionData = await response.json();
                 updateSessionIdPesas(sessionData.id);
-
-                if (
-                    sessionData.end_time === null &&
-                    sessionData.type === "Pesas"
-                ) {
-                    console.log("Open session found:", sessionData);
-                } else {
-                    console.log("New session created:", sessionData);
-                }
-
                 setCurrentView("pesas");
             } else {
                 setCurrentView("initial");
@@ -282,16 +249,6 @@ function Diary() {
             if (response.ok) {
                 const sessionData = await response.json();
                 updateSessionIdCardio(sessionData.id);
-
-                if (
-                    sessionData.end_time === null &&
-                    sessionData.type === "Cardio"
-                ) {
-                    console.log("Open session found:", sessionData);
-                } else {
-                    console.log("New session created:", sessionData);
-                }
-
                 setCurrentView("cardio");
             } else {
                 setCurrentView("initial");
@@ -332,7 +289,6 @@ function Diary() {
 
     const addSet = async (exercise_id) => {
         const newSet = await createSet(exercise_id);
-        console.log("New Set", newSet);
         const response = await fetch("https://regymserver.onrender.com/sets", {
             method: "POST",
             headers: {
@@ -433,7 +389,6 @@ function Diary() {
 
                 if (response.ok) {
                     const updatedSet = await response.json();
-                    console.log("Set updated successfully:", updatedSet);
                     // Actualizamos el lastValue del siguiente set
                     await fetch(
                         `https://regymserver.onrender.com/sets/updateLastValueForNextSet`,
@@ -467,7 +422,6 @@ function Diary() {
 
     const addInterval = async (exercise_id) => {
         const newInterval = await createInterval(exercise_id);
-        console.log("New Interval:", newInterval);
         const response = await fetch(
             "https://regymserver.onrender.com/intervals",
             {
@@ -578,10 +532,6 @@ function Diary() {
 
                 if (response.ok) {
                     const updatedInterval = await response.json();
-                    console.log(
-                        "Interval updated successfully:",
-                        updatedInterval
-                    );
                     // Actualizamos el lastValue del siguiente interval
                     await fetch(
                         `https://regymserver.onrender.com/intervals/updateLastValueForNextInterval`,
@@ -633,7 +583,6 @@ function Diary() {
                 (exercise) => exercise.id === exerciseId
             );
         }
-        console.log("Borrando exercise...", exerciseToDelete);
         const formattedDate = formatLocalDate(selectedDate);
 
         try {
@@ -650,11 +599,6 @@ function Diary() {
             if (response.ok) {
                 const data = await response.json();
                 const { exerciseType } = data;
-
-                console.log(
-                    "Exercise deleted successfully, Type:",
-                    exerciseType
-                );
 
                 if (exerciseType === "Pesas") {
                     setExercises((prevExercises) =>
@@ -718,8 +662,6 @@ function Diary() {
             );
         }
 
-        console.log("Borrando set... ", setToDelete);
-
         try {
             const response = await fetch(
                 `https://regymserver.onrender.com/sets/deleteById/${setId}`,
@@ -729,7 +671,6 @@ function Diary() {
             );
 
             if (response.ok) {
-                console.log("Set deleted successfully");
                 setSets((prevSets) =>
                     prevSets.filter((set) => set.id !== setId)
                 );
@@ -792,8 +733,6 @@ function Diary() {
             );
         }
 
-        console.log("Borrando interval... ", intervalToDelete);
-
         try {
             const response = await fetch(
                 `https://regymserver.onrender.com/intervals/deleteById/${intervalId}`,
@@ -803,7 +742,6 @@ function Diary() {
             );
 
             if (response.ok) {
-                console.log("Interval deleted successfully");
                 setIntervals((prevIntervals) =>
                     prevIntervals.filter(
                         (interval) => interval.id !== intervalId
@@ -854,7 +792,6 @@ function Diary() {
 
             if (response.ok) {
                 const data = await response.json();
-                console.log("Last Set: ", data);
                 if (data.weight == null || data.reps == null) {
                     return "-";
                 } else {
@@ -878,7 +815,6 @@ function Diary() {
 
             if (response.ok) {
                 const data = await response.json();
-                console.log("Last Interval: ", data);
                 if (data.duration == null || data.distance == null) {
                     return "-";
                 } else {
@@ -922,7 +858,6 @@ function Diary() {
 
             if (response.ok) {
                 const updatedExercise = await response.json();
-                console.log("Notas guardadas con éxito:", updatedExercise);
             } else {
                 console.error("Error al guardar las notas");
             }

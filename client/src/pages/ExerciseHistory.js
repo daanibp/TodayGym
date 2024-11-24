@@ -22,7 +22,6 @@ function ExerciseHistory() {
                 } else {
                     const data = await response.json();
                     setHistory(data || []);
-                    console.log("History", data);
                 }
             } catch (error) {
                 console.error("Failed to fetch exercise history:", error);

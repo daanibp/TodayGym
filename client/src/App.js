@@ -39,7 +39,6 @@ function App() {
 // Separa las rutas en un componente basado en el estado de autenticación
 function AuthRoutes() {
     const { token, login, logout, loading } = useContext(AuthContext);
-    //console.log("User:", user);
 
     // Mostrar un estado de carga mientras verificamos si el usuario está autenticado
     if (loading) {
