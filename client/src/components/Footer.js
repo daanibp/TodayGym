@@ -5,7 +5,10 @@ const Footer = () => {
     return (
         <div className="w-full fixed bottom-0 left-0 right-0 z-40">
             {/* Curva decorativa */}
-            <div className="absolute bottom-[-60px] left-[-30%] right-[-30%] h-[140px] bg-[#890000] rounded-t-full z-1"></div>
+            <div
+                className="absolute bottom-[-60px] left-[-30%] right-[-30%] h-[140px] bg-[#890000] z-1"
+                style={{ borderRadius: "50% 50% 0 0" }}
+            ></div>
 
             {/* Barra de navegación */}
             <div className="relative bg-[#890000] h-[60px] flex justify-around items-center text-white font-bold z-10">
